@@ -65,6 +65,26 @@ syn keyword   glslType  usampler2DArray usampler2DMS usampler2DMSArray usampler2
 syn keyword   glslType  usampler3D usamplerBuffer usamplerCube usamplerCubeArray
 syn keyword   glslType  uvec2 uvec3 uvec4 vec2 vec3 vec4 void 
 
+" Qualifiers
+syn keyword   glslQualifier  precision invariant
+syn keyword   glslQualifier  attribute binding ccw centroid column_major const
+syn keyword   glslQualifier  cw depth_any depth_greater depth_less depth_unchanged
+syn keyword   glslQualifier  early_fragment_tests equal_spacing flat
+syn keyword   glslQualifier  fractional_even_spacing fractional_odd_spacing highp
+syn keyword   glslQualifier  in index inout invocations isolines layout line_strip
+syn keyword   glslQualifier  lines lines_adjacency location lowp max_vertices
+syn keyword   glslQualifier  mediump noperspective offset origin_upper_left
+syn keyword   glslQualifier  origin_upper_left out packed patch pixel_center_integer
+syn keyword   glslQualifier  point_mode points quads r11f_g11f_b10f r16 r16_snorm
+syn keyword   glslQualifier  r16f r16i r16ui r32f r32i r32ui r8 r8_snorm r8i
+syn keyword   glslQualifier  r8ui rg16 rg16_snorm rg16f rg16i rg16ui rg32f rg32i
+syn keyword   glslQualifier  rg32ui rg8 rg8_snorm rg8i rg8ui rgb10_a2 rgb10_a2ui
+syn keyword   glslQualifier  rgba16 rgba16_snorm rgba16f rgba16i rgba16ui rgba32f
+syn keyword   glslQualifier  rgba32i rgba32ui rgba8 rgba8_snorm rgba8i rgba8ui
+syn keyword   glslQualifier  row_major sample shared smooth std140 stream
+syn keyword   glslQualifier  triangle_strip triangles triangles_adjacency uniform varying
+syn keyword   glslQualifier  coherent volatile restrict readonly writeonly
+
 
 hi def link glslConditional       Conditional
 hi def link glslRepeat            Repeat
@@ -86,6 +106,7 @@ hi def link glslNumber            Number
 hi def link glslFloat             Float
 hi def link glslStructure         Structure
 hi def link glslType              Type
+hi def link glslQualifier         StorageClass
 
 let b:current_syntax = "glsl"
 
