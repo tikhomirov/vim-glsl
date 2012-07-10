@@ -1,8 +1,7 @@
 " Vim syntax file
 " Language:	OpenGL Shading Language
 " Maintainer:	Sergey Tikhomirov <me@stikhomirov.com>
-" URL:
-" Last Change:	2012 July 7
+" Last Change:	2012 July 10
 
 if exists("b:current_syntax")
   finish
