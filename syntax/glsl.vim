@@ -159,6 +159,21 @@ syn keyword glslBuiltinFunction barrier
 " 8.16 Shader Memory Control Function
 syn keyword glslBuiltinFunction memoryBarrier
 
+" 7.1 Built-in Variables
+syn keyword glslBuiltinVariable gl_VertexID gl_InstanceID gl_Position
+syn keyword glslBuiltinVariable gl_PointSize gl_ClipDistance gl_in
+syn keyword glslBuiltinVariable gl_PrimitiveIDIn gl_InvocationID
+syn keyword glslBuiltinVariable gl_PrimitiveID gl_Layer gl_ViewportIndex
+syn keyword glslBuiltinVariable gl_PatchVerticesIn gl_out gl_TessLevelOuter
+syn keyword glslBuiltinVariable gl_TessLevelInner gl_TessCoord gl_FragCoord
+syn keyword glslBuiltinVariable gl_FrontFacing gl_PointCoord gl_SampleID
+syn keyword glslBuiltinVariable gl_SamplePosition gl_SampleMaskIn gl_FragDepth
+syn keyword glslBuiltinVariable gl_SampleMask
+" 7.4 Built-In Uniform State
+" TODO Perhaps add highlighting for gl_DepthRange.near, or for
+" gl_DepthRangeParameters.
+syn keyword glslBuiltinVariable gl_DepthRange gl_NumSamples
+
 " This prevents numbers at ends of identifies from being highlighted as
 " numbers.
 syn match glslIdentifier display "\I\i*"
@@ -185,6 +200,7 @@ hi def link glslStructure         Structure
 hi def link glslType              Type
 hi def link glslQualifier         StorageClass
 hi def link glslBuiltinFunction   Function
+hi def link glslBuiltinVariable   Identifier
 hi def link glslSwizzle           SpecialChar
 
 let b:current_syntax = "glsl"
