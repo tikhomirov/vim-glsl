@@ -1,7 +1,7 @@
 " Vim syntax file
-" Language:	OpenGL Shading Language
-" Maintainer:	Sergey Tikhomirov <me@stikhomirov.com>
-" Last Change:	2012 July 10
+" Language:     OpenGL Shading Language
+" Maintainer:   Sergey Tikhomirov <me@stikhomirov.com>
+" Last Change:  2012 July 10
 
 if exists("b:current_syntax")
   finish
@@ -13,7 +13,7 @@ syn keyword   glslRepeat        for while do
 syn keyword   glslStatement     discard return break continue
 
 " Comments
-syn keyword	  glslTodo      contained TODO FIXME XXX
+syn keyword   glslTodo      contained TODO FIXME XXX
 syn region    glslCommentL  start="//" skip="\\$" end="$" keepend contains=glslTodo
 syn region    glslComment   matchgroup=glslCommentStart start="/\*" end="\*/" extend contains=glslTodo
 
@@ -39,7 +39,7 @@ syn match     glslFloat   "\.\d\+\([eE][+-]\=\d\+\)\="
 syn match     glslFloat   "\d\+[eE][+-]\=\d\+"
 
 " Types
-syn keyword	  glslStructure   struct
+syn keyword   glslStructure   struct
 syn keyword   glslType  atomic_uint bool bvec2 bvec3 bvec4 dmat2 dmat2x2 dmat2x3
 syn keyword   glslType  dmat2x4 dmat3 dmat3x2 dmat3x3 dmat3x4 dmat4 dmat4x2 dmat4x3
 syn keyword   glslType  dmat4x4 double dvec2 dvec3 dvec4 float iimage1D iimage1DArray
@@ -62,7 +62,7 @@ syn keyword   glslType  uimage2DMSArray uimage2DRect uimage3D uimageBuffer uimag
 syn keyword   glslType  uimageCubeArray uint usampler1D usampler1DArray usampler2D
 syn keyword   glslType  usampler2DArray usampler2DMS usampler2DMSArray usampler2DRect
 syn keyword   glslType  usampler3D usamplerBuffer usamplerCube usamplerCubeArray
-syn keyword   glslType  uvec2 uvec3 uvec4 vec2 vec3 vec4 void 
+syn keyword   glslType  uvec2 uvec3 uvec4 vec2 vec3 vec4 void
 
 " Qualifiers
 syn keyword   glslQualifier  precision invariant
