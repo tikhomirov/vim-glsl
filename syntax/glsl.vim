@@ -85,6 +85,10 @@ syn keyword   glslQualifier  triangle_strip triangles triangles_adjacency unifor
 syn keyword   glslQualifier  coherent volatile restrict readonly writeonly
 
 
+" This prevents numbers at ends of identifies from being highlighted as
+" numbers.
+syn match glslIdentifier display "\I\i*"
+
 hi def link glslConditional       Conditional
 hi def link glslRepeat            Repeat
 hi def link glslStatement         Statement
