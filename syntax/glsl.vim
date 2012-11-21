@@ -38,6 +38,11 @@ syn match     glslFloat   "\d\+\.\([eE][+-]\=\d\+\)\="
 syn match     glslFloat   "\.\d\+\([eE][+-]\=\d\+\)\="
 syn match     glslFloat   "\d\+[eE][+-]\=\d\+"
 
+" Swizzles
+syn match     glslSwizzle display /\.[xyzw]\{1,4\}\>/
+syn match     glslSwizzle display /\.[rgba]\{1,4\}\>/
+syn match     glslSwizzle display /\.[stpq]\{1,4\}\>/
+
 " Types
 syn keyword   glslStructure   struct
 syn keyword   glslType  atomic_uint bool bvec2 bvec3 bvec4 dmat2 dmat2x2 dmat2x3
@@ -110,6 +115,7 @@ hi def link glslFloat             Float
 hi def link glslStructure         Structure
 hi def link glslType              Type
 hi def link glslQualifier         StorageClass
+hi def link glslSwizzle           SpecialChar
 
 let b:current_syntax = "glsl"
 
