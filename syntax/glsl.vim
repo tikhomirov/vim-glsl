@@ -89,6 +89,75 @@ syn keyword   glslQualifier  row_major sample shared smooth std140 stream
 syn keyword   glslQualifier  triangle_strip triangles triangles_adjacency uniform varying
 syn keyword   glslQualifier  coherent volatile restrict readonly writeonly
 
+" These functions were taken from the 4.20 version of the GLSL specification,
+" found at
+"     http://www.opengl.org/registry/doc/GLSLangSpec.4.20.11.clean.pdf
+
+" 8.1 Angle and Trigonometry Functions
+syn keyword glslBuiltinFunction radians degrees sin cos tan asin acos atan
+syn keyword glslBuiltinFunction sinh cosh tanh asinh acosh atanh
+" 8.2 Exponential Functions
+syn keyword glslBuiltinFunction pow exp log exp2 log2 sqrt inversesqrt
+" 8.3 Common Functions
+syn keyword glslBuiltinFunction abs sign floor trunc round roundEven ceil
+syn keyword glslBuiltinFunction fract mod modf min max clamp mix step
+syn keyword glslBuiltinFunction smoothstep isnan isinf floatBitsToInt
+syn keyword glslBuiltinFunction floatBitsToUint intBitsToFloat uintBitsToFloat
+syn keyword glslBuiltinFunction fma frexp ldexp
+" 8.4 Floating-Point Pack and Unpack Functions
+syn keyword glslBuiltinFunction packUnorm2x16 packSnorm2x16 packUnorm4x8
+syn keyword glslBuiltinFunction packSnorm4x8 unpackUnorm2x16 unpackSnorm2x16
+syn keyword glslBuiltinFunction unpackUnorm4x8 unpackSnorm4x8 packDouble2x32
+syn keyword glslBuiltinFunction unpackDouble2x32 packHalf2x16 unpackHalf2x16
+" 8.5 Geometric Functions
+syn keyword glslBuiltinFunction length distance dot cross normalize faceforward
+syn keyword glslBuiltinFunction reflect refract
+" 8.6 Matrix Functions
+syn keyword glslBuiltinFunction matrixCompMult outerProduct transpose
+syn keyword glslBuiltinFunction determinant
+syn keyword glslBuiltinFunction inverse
+" 8.7 Vector Relational Functions
+syn keyword glslBuiltinFunction lessThan lessThanEqual greaterThan
+syn keyword glslBuiltinFunction greaterThanEqual
+syn keyword glslBuiltinFunction equal notEqual any all not
+" 8.8 Integer Functions
+syn keyword glslBuiltinFunction uaddCarry usubBorrow umulExtended imulExtended
+syn keyword glslBuiltinFunction bitfieldExtract bitfieldInsert bitfieldReverse
+syn keyword glslBuiltinFunction bitCount findLSB findMSB
+" 8.9.1 Texture Query Functions
+syn keyword glslBuiltinFunction textureSize textureQueryLod
+" 8.9.2 Texel Lookup Functions
+syn keyword glslBuiltinFunction texture textureProj textureLod textureOffset
+syn keyword glslBuiltinFunction texelFetch texelFetchOffset textureProjOffset
+syn keyword glslBuiltinFunction textureLodOffset textureProjLod
+syn keyword glslBuiltinFunction textureProjLodOffset textureGrad
+syn keyword glslBuiltinFunction textureGradOffset textureProjGrad
+syn keyword glslBuiltinFunction textureProjGradOffset
+" 8.9.3 Texture Gather Instructions
+syn keyword glslBuiltinFunction textureGather textureGatherOffset
+syn keyword glslBuiltinFunction textureGatherOffsets
+" 8.10 Atomic-Counter Functions
+syn keyword glslBuiltinFunction atomicCounterIncrement atomicCounterDecrement
+syn keyword glslBuiltinFunction atomicCounter
+" 8.11 Image Functions
+syn keyword glslBuiltinFunction imageLoad imageStore imageAtomicAdd
+syn keyword glslBuiltinFunction imageAtomicMin imageAtomicMax imageAtomicAnd
+syn keyword glslBuiltinFunction imageAtomicOr imageAtomicXor
+syn keyword glslBuiltinFunction imageAtomicExchange imageAtomicCompSwap
+" 8.12.1 Derivative Functions
+syn keyword glslBuiltinFunction dFdx dFdy fwidth
+" 8.12.2 Interpolation Functions
+syn keyword glslBuiltinFunction interpolateAtCentroid interpolateAtSample
+syn keyword glslBuiltinFunction interpolateAtOffset
+" 8.13 Noise Functions
+syn keyword glslBuiltinFunction noise1 noise2 noise3 noise4
+" 8.14 Geometry Shader Functions
+syn keyword glslBuiltinFunction EmitStreamVertex EndStreamPrimitive EmitVertex
+syn keyword glslBuiltinFunction EndPrimitive
+" 8.15 Shader Invocation Control Functions
+syn keyword glslBuiltinFunction barrier
+" 8.16 Shader Memory Control Function
+syn keyword glslBuiltinFunction memoryBarrier
 
 " This prevents numbers at ends of identifies from being highlighted as
 " numbers.
@@ -115,6 +184,7 @@ hi def link glslFloat             Float
 hi def link glslStructure         Structure
 hi def link glslType              Type
 hi def link glslQualifier         StorageClass
+hi def link glslBuiltinFunction   Function
 hi def link glslSwizzle           SpecialChar
 
 let b:current_syntax = "glsl"
