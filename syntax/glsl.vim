@@ -174,6 +174,61 @@ syn keyword glslBuiltinVariable gl_SampleMask
 " gl_DepthRangeParameters.
 syn keyword glslBuiltinVariable gl_DepthRange gl_NumSamples
 
+" 7.3 Built-in Constants
+syn keyword glslBuiltinConstant gl_MaxVertexAttribs gl_MaxUniformComponents
+syn keyword glslBuiltinConstant gl_MaxVaryingComponents
+syn keyword glslBuiltinConstant gl_MaxVertexOutputComponents
+syn keyword glslBuiltinConstant gl_MaxGeometryInputComponents
+syn keyword glslBuiltinConstant gl_MaxGeometryOutputComponents
+syn keyword glslBuiltinConstant gl_MaxFragmentInputComponents
+syn keyword glslBuiltinConstant gl_MaxVertexTextureImageUnits
+syn keyword glslBuiltinConstant gl_MaxCombinedTextureImageUnits
+syn keyword glslBuiltinConstant gl_MaxTextureImageUnits gl_MaxImageUnits
+syn keyword glslBuiltinConstant gl_MaxCombinedImageUnitsAndFragmentOutputs
+syn keyword glslBuiltinConstant gl_MaxImageSamples gl_MaxVertexImageUniforms
+syn keyword glslBuiltinConstant gl_MaxTessControlImageUniforms
+syn keyword glslBuiltinConstant gl_MaxTessEvaluationImageUniforms
+syn keyword glslBuiltinConstant gl_MaxGeometryImageUniforms
+syn keyword glslBuiltinConstant gl_MaxFragmentImageUniforms
+syn keyword glslBuiltinConstant gl_MaxCombinedImageUniforms
+syn keyword glslBuiltinConstant gl_MaxFragmentUniformComponents
+syn keyword glslBuiltinConstant gl_MaxDrawBuffers gl_MaxClipDistances
+syn keyword glslBuiltinConstant gl_MaxGeometryTextureImageUnits
+syn keyword glslBuiltinConstant gl_MaxGeometryOutputVertices
+syn keyword glslBuiltinConstant gl_MaxGeometryTotalOutputComponents
+syn keyword glslBuiltinConstant gl_MaxGeometryUniformComponents
+syn keyword glslBuiltinConstant gl_MaxGeometryVaryingComponents
+syn keyword glslBuiltinConstant gl_MaxTessControlInputComponents
+syn keyword glslBuiltinConstant gl_MaxTessControlOutputComponents
+syn keyword glslBuiltinConstant gl_MaxTessControlTextureImageUnits
+syn keyword glslBuiltinConstant gl_MaxTessControlUniformComponents
+syn keyword glslBuiltinConstant gl_MaxTessControlTotalOutputComponents
+syn keyword glslBuiltinConstant gl_MaxTessEvaluationInputComponents
+syn keyword glslBuiltinConstant gl_MaxTessEvaluationOutputComponents
+syn keyword glslBuiltinConstant gl_MaxTessEvaluationTextureImageUnits
+syn keyword glslBuiltinConstant gl_MaxTessEvaluationUniformComponents
+syn keyword glslBuiltinConstant gl_MaxTessEvaluationTotalOutputComponents
+syn keyword glslBuiltinConstant gl_MaxTessPatchComponents gl_MaxPatchVertices
+syn keyword glslBuiltinConstant gl_MaxTessGenLevel
+syn keyword glslBuiltinConstant gl_MaxViewports
+syn keyword glslBuiltinConstant gl_MaxVertexUniformVectors
+syn keyword glslBuiltinConstant gl_MaxFragmentUniformVectors
+syn keyword glslBuiltinConstant gl_MaxVaryingVectors
+syn keyword glslBuiltinConstant gl_MaxVertexAtomicCounters
+syn keyword glslBuiltinConstant gl_MaxTessControlAtomicCounters
+syn keyword glslBuiltinConstant gl_MaxTessEvaluationAtomicCounters
+syn keyword glslBuiltinConstant gl_MaxGeometryAtomicCounters
+syn keyword glslBuiltinConstant gl_MaxFragmentAtomicCounters
+syn keyword glslBuiltinConstant gl_MaxCombinedAtomicCounters
+syn keyword glslBuiltinConstant gl_MaxVertexAtomicCounterBuffers
+syn keyword glslBuiltinConstant gl_MaxTessControlAtomicCounterBuffers
+syn keyword glslBuiltinConstant gl_MaxGeometryAtomicCounterBuffers
+syn keyword glslBuiltinConstant gl_MaxFragmentAtomicCounterBuffers
+syn keyword glslBuiltinConstant gl_MaxCombinedAtomicCounterBuffers
+syn keyword glslBuiltinConstant gl_MaxAtomicCounterBufferSize
+syn keyword glslBuiltinConstant gl_MinProgramTexelOffset
+syn keyword glslBuiltinConstant gl_MaxProgramTexelOffset
+
 " This prevents numbers at ends of identifies from being highlighted as
 " numbers.
 syn match glslIdentifier display "\I\i*"
@@ -199,6 +254,7 @@ hi def link glslFloat             Float
 hi def link glslStructure         Structure
 hi def link glslType              Type
 hi def link glslQualifier         StorageClass
+hi def link glslBuiltinConstant   Constant
 hi def link glslBuiltinFunction   Function
 hi def link glslBuiltinVariable   Identifier
 hi def link glslSwizzle           SpecialChar
