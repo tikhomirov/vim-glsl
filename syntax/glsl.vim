@@ -27,16 +27,15 @@ syn region    glslPreProc           start="^\s*#\s*\(error\|pragma\|extension\|v
 " Boolean Constants
 syn keyword   glslBoolean true false
 
-" Integer Numbers
-syn match     glslDecimalInt  "\(0\|[1-9]\d*\)"
-syn match     glslOctalInt    "0\o\+"
-syn match     glslHexInt      "0[xX]\x\+"
-
-" Float Numbers
-syn match     glslFloat   "\d\+\.\d\+\([eE][+-]\=\d\+\)\="
-syn match     glslFloat   "\d\+\.\([eE][+-]\=\d\+\)\="
-syn match     glslFloat   "\.\d\+\([eE][+-]\=\d\+\)\="
-syn match     glslFloat   "\d\+[eE][+-]\=\d\+"
+" Numbers
+" integers
+syn match glslInteger	"\<0[xX]\x\+\>" display
+syn match glslInteger	"\<\%(0\|[1-9]\d*\)\>" display
+syn match glslInteger	"\<0\o\+\>" display
+" floats
+" FIXME doesn't match floats that look like 123. or .123
+syn match glslFloat	  "\<\%(0\|[1-9]\d*\)\.\%(\d\+\)\>" display
+syn match glslFloat	  "\<\%(0\|[1-9]\d*\)\%(\.\d\+\)\=\%([eE][-+]\=\d\+\)\>" display
 
 " Types
 syn keyword	  glslStructure   struct
@@ -98,10 +97,7 @@ hi def link glslTokenConcat       glslPreProc
 hi def link glslPredefinedMacro   Macro
 hi def link glslPreProc           PreProc
 hi def link glslBoolean           Boolean
-hi def link glslDecimalInt        glslNumber
-hi def link glslOctalInt          glslNumber
-hi def link glslHexInt            glslNumber
-hi def link glslNumber            Number
+hi def link glslInteger           Number
 hi def link glslFloat             Float
 hi def link glslStructure         Structure
 hi def link glslType              Type
