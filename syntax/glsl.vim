@@ -33,10 +33,10 @@ syn match     glslOctalInt   display "0\o\+"
 syn match     glslHexInt     display "0[xX]\x\+"
 
 " Float Numbers
-syn match     glslFloat display "\d\+\.\d\+\([eE][+-]\=\d\+\)\="
 syn match     glslFloat display "\d\+\.\([eE][+-]\=\d\+\)\="
 syn match     glslFloat display "\.\d\+\([eE][+-]\=\d\+\)\="
 syn match     glslFloat display "\d\+[eE][+-]\=\d\+"
+syn match     glslFloat display "\d\+\.\d\+\([eE][+-]\=\d\+\)\="
 
 " Swizzles
 syn match     glslSwizzle display /\.[xyzw]\{1,4\}\>/
@@ -246,6 +246,9 @@ hi def link glslTokenConcat       glslPreProc
 hi def link glslPredefinedMacro   Macro
 hi def link glslPreProc           PreProc
 hi def link glslBoolean           Boolean
+hi def link glslDecimalInt        glslInteger
+hi def link glslOctalInt          glslInteger
+hi def link glslHexInt            glslInteger
 hi def link glslInteger           Number
 hi def link glslFloat             Float
 hi def link glslStructure         Structure
