@@ -1,7 +1,6 @@
 " Vim syntax file
-" Language:     OpenGL Shading Language
-" Maintainer:   Sergey Tikhomirov <me@stikhomirov.com>
-" Last Change:  2012 July 10
+" Language: OpenGL Shading Language
+" Maintainer: Sergey Tikhomirov <sergey@tikhomirov.io>
 
 if exists("b:current_syntax")
   finish
@@ -261,4 +260,4 @@ hi def link glslSwizzle           SpecialChar
 
 let b:current_syntax = "glsl"
 
-" vim:set sw=2:
+" vim:set sts=2 sw=2 :
