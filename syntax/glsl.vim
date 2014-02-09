@@ -1,8 +1,7 @@
-" Vim syntax file
 " Language: OpenGL Shading Language
 " Maintainer: Sergey Tikhomirov <sergey@tikhomirov.io>
 
-if exists("b:current_syntax")
+if exists("b:current_syntax") && b:current_syntax == "glsl"
   finish
 endif
 
@@ -258,6 +257,8 @@ hi def link glslBuiltinFunction   Function
 hi def link glslBuiltinVariable   Identifier
 hi def link glslSwizzle           SpecialChar
 
-let b:current_syntax = "glsl"
+if !exists("b:current_syntax")
+  let b:current_syntax = "glsl"
+endif
 
 " vim:set sts=2 sw=2 :

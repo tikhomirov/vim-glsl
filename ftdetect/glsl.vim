@@ -1,4 +1,3 @@
-" Vim syntax file
 " Language: OpenGL Shading Language
 " Maintainer: Sergey Tikhomirov <sergey@tikhomirov.io>
 
