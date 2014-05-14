@@ -12,8 +12,8 @@ syn keyword glslStatement   discard return break continue
 
 " Comments
 syn keyword glslTodo     contained TODO FIXME XXX
-syn region  glslCommentL start="//" skip="\\$" end="$" keepend contains=glslTodo
-syn region  glslComment  matchgroup=glslCommentStart start="/\*" end="\*/" extend contains=glslTodo
+syn region  glslCommentL start="//" skip="\\$" end="$" keepend contains=glslTodo,@Spell
+syn region  glslComment  matchgroup=glslCommentStart start="/\*" end="\*/" extend contains=glslTodo,@Spell
 
 " Preprocessor
 syn region  glslPreCondit       start="^\s*#\s*\(if\|ifdef\|ifndef\|else\|elif\|endif\)" skip="\\$" end="$" keepend
