@@ -2,6 +2,8 @@
 
 Vim syntax highlighting for OpenGL Shading Language
 
+This plugin contributes to [vim-polyglot](https://github.com/sheerun/vim-polyglot) language pack.
+
 ## Supported GLSL Versions
 
 * OpenGL Shading Language 1.10
