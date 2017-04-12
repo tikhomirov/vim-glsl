@@ -31,10 +31,10 @@ syn match glslOctalInt   display "0\o\+[uU]\?"
 syn match glslHexInt     display "0[xX]\x\+[uU]\?"
 
 " Float Numbers
-syn match glslFloat display "\d\+\.\([eE][+-]\=\d\+\)\=\(lf\|LF\)\="
-syn match glslFloat display "\.\d\+\([eE][+-]\=\d\+\)\=\(lf\|LF\)\="
-syn match glslFloat display "\d\+[eE][+-]\=\d\+\(lf\|LF\)\="
-syn match glslFloat display "\d\+\.\d\+\([eE][+-]\=\d\+\)\=\(lf\|LF\)\="
+syn match glslFloat display "\d\+\.\([eE][+-]\=\d\+\)\=\(lf\|LF\|f\|F\)\="
+syn match glslFloat display "\.\d\+\([eE][+-]\=\d\+\)\=\(lf\|LF\|f\|F\)\="
+syn match glslFloat display "\d\+[eE][+-]\=\d\+\(lf\|LF\|f\|F\)\="
+syn match glslFloat display "\d\+\.\d\+\([eE][+-]\=\d\+\)\=\(lf\|LF\|f\|F\)\="
 
 " Swizzles
 syn match glslSwizzle display /\.[xyzw]\{1,4\}\>/
