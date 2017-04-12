@@ -26,9 +26,9 @@ syn region  glslPreProc         start="^\s*#\s*\(error\|pragma\|extension\|versi
 syn keyword glslBoolean true false
 
 " Integer Numbers
-syn match glslDecimalInt display "\(0\|[1-9]\d*\)[uUfF]\?"
-syn match glslOctalInt   display "0\o\+[uUfF]\?"
-syn match glslHexInt     display "0[xX]\x\+[uUfF]\?"
+syn match glslDecimalInt display "\(0\|[1-9]\d*\)[uU]\?"
+syn match glslOctalInt   display "0\o\+[uU]\?"
+syn match glslHexInt     display "0[xX]\x\+[uU]\?"
 
 " Float Numbers
 syn match glslFloat display "\d\+\.\([eE][+-]\=\d\+\)\=\(lf\|LF\)\="
