@@ -169,6 +169,7 @@ syn keyword glslType vec4
 syn keyword glslType void
 
 " Qualifiers
+syn keyword glslQualifier align
 syn keyword glslQualifier attribute
 syn keyword glslQualifier binding
 syn keyword glslQualifier buffer
@@ -274,16 +275,22 @@ syn keyword glslQualifier varying
 syn keyword glslQualifier vertices
 syn keyword glslQualifier volatile
 syn keyword glslQualifier writeonly
+syn keyword glslQualifier xfb_buffer
+syn keyword glslQualifier xfb_stride
+syn keyword glslQualifier xfb_offset
 
 " Built-in Constants
+syn keyword glslBuiltinConstant gl_CullDistance
 syn keyword glslBuiltinConstant gl_MaxAtomicCounterBindings
 syn keyword glslBuiltinConstant gl_MaxAtomicCounterBufferSize
 syn keyword glslBuiltinConstant gl_MaxClipDistances
 syn keyword glslBuiltinConstant gl_MaxClipPlanes
 syn keyword glslBuiltinConstant gl_MaxCombinedAtomicCounterBuffers
 syn keyword glslBuiltinConstant gl_MaxCombinedAtomicCounters
+syn keyword glslBuiltinConstant gl_MaxCombinedClipAndCullDistances
 syn keyword glslBuiltinConstant gl_MaxCombinedImageUniforms
 syn keyword glslBuiltinConstant gl_MaxCombinedImageUnitsAndFragmentOutputs
+syn keyword glslBuiltinConstant gl_MaxCombinedShaderOutputResources
 syn keyword glslBuiltinConstant gl_MaxCombinedTextureImageUnits
 syn keyword glslBuiltinConstant gl_MaxComputeAtomicCounterBuffers
 syn keyword glslBuiltinConstant gl_MaxComputeAtomicCounters
@@ -292,6 +299,7 @@ syn keyword glslBuiltinConstant gl_MaxComputeTextureImageUnits
 syn keyword glslBuiltinConstant gl_MaxComputeUniformComponents
 syn keyword glslBuiltinConstant gl_MaxComputeWorkGroupCount
 syn keyword glslBuiltinConstant gl_MaxComputeWorkGroupSize
+syn keyword glslBuiltinConstant gl_MaxCullDistances
 syn keyword glslBuiltinConstant gl_MaxDrawBuffers
 syn keyword glslBuiltinConstant gl_MaxFragmentAtomicCounterBuffers
 syn keyword glslBuiltinConstant gl_MaxFragmentAtomicCounters
@@ -315,6 +323,7 @@ syn keyword glslBuiltinConstant gl_MaxImageUnits
 syn keyword glslBuiltinConstant gl_MaxLights
 syn keyword glslBuiltinConstant gl_MaxPatchVertices
 syn keyword glslBuiltinConstant gl_MaxProgramTexelOffset
+syn keyword glslBuiltinConstant gl_MaxSamples
 syn keyword glslBuiltinConstant gl_MaxTessControlAtomicCounterBuffers
 syn keyword glslBuiltinConstant gl_MaxTessControlAtomicCounters
 syn keyword glslBuiltinConstant gl_MaxTessControlImageUniforms
@@ -335,6 +344,8 @@ syn keyword glslBuiltinConstant gl_MaxTessPatchComponents
 syn keyword glslBuiltinConstant gl_MaxTextureCoords
 syn keyword glslBuiltinConstant gl_MaxTextureImageUnits
 syn keyword glslBuiltinConstant gl_MaxTextureUnits
+syn keyword glslBuiltinConstant gl_MaxTransformFeedbackBuffers
+syn keyword glslBuiltinConstant gl_MaxTransformFeedbackInterleavedComponents
 syn keyword glslBuiltinConstant gl_MaxVaryingComponents
 syn keyword glslBuiltinConstant gl_MaxVaryingFloats
 syn keyword glslBuiltinConstant gl_MaxVaryingVectors
@@ -380,6 +391,7 @@ syn keyword glslBuiltinVariable gl_FrontLightProduct
 syn keyword glslBuiltinVariable gl_FrontMaterial
 syn keyword glslBuiltinVariable gl_FrontSecondaryColor
 syn keyword glslBuiltinVariable gl_GlobalInvocationID
+syn keyword glslBuiltinVariable gl_HelperInvocation
 syn keyword glslBuiltinVariable gl_InstanceID
 syn keyword glslBuiltinVariable gl_InvocationID
 syn keyword glslBuiltinVariable gl_Layer
@@ -481,7 +493,11 @@ syn keyword glslBuiltinFunction cos
 syn keyword glslBuiltinFunction cosh
 syn keyword glslBuiltinFunction cross
 syn keyword glslBuiltinFunction dFdx
+syn keyword glslBuiltinFunction dFdxCoarse
+syn keyword glslBuiltinFunction dFdxFine
 syn keyword glslBuiltinFunction dFdy
+syn keyword glslBuiltinFunction dFdyCoarse
+syn keyword glslBuiltinFunction dFdyFine
 syn keyword glslBuiltinFunction degrees
 syn keyword glslBuiltinFunction determinant
 syn keyword glslBuiltinFunction distance
@@ -500,6 +516,8 @@ syn keyword glslBuiltinFunction fract
 syn keyword glslBuiltinFunction frexp
 syn keyword glslBuiltinFunction ftransform
 syn keyword glslBuiltinFunction fwidth
+syn keyword glslBuiltinFunction fwidthCoarse
+syn keyword glslBuiltinFunction fwidthFine
 syn keyword glslBuiltinFunction greaterThan
 syn keyword glslBuiltinFunction greaterThanEqual
 syn keyword glslBuiltinFunction groupMemoryBarrier
