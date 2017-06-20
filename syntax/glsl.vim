@@ -26,15 +26,15 @@ syn region  glslPreProc         start="^\s*#\s*\(error\|pragma\|extension\|versi
 syn keyword glslBoolean true false
 
 " Integer Numbers
-syn match glslDecimalInt display "\(0\|[1-9]\d*\)[uU]\?"
-syn match glslOctalInt   display "0\o\+[uU]\?"
-syn match glslHexInt     display "0[xX]\x\+[uU]\?"
+syn match glslDecimalInt display "\<\(0\|[1-9]\d*\)[uU]\?"
+syn match glslOctalInt   display "\<0\o\+[uU]\?"
+syn match glslHexInt     display "\<0[xX]\x\+[uU]\?"
 
 " Float Numbers
-syn match glslFloat display "\d\+\.\([eE][+-]\=\d\+\)\=\(lf\|LF\|f\|F\)\="
-syn match glslFloat display "\.\d\+\([eE][+-]\=\d\+\)\=\(lf\|LF\|f\|F\)\="
-syn match glslFloat display "\d\+[eE][+-]\=\d\+\(lf\|LF\|f\|F\)\="
-syn match glslFloat display "\d\+\.\d\+\([eE][+-]\=\d\+\)\=\(lf\|LF\|f\|F\)\="
+syn match glslFloat display "\<\d\+\.\([eE][+-]\=\d\+\)\=\(lf\|LF\|f\|F\)\="
+syn match glslFloat display "\<\.\d\+\([eE][+-]\=\d\+\)\=\(lf\|LF\|f\|F\)\="
+syn match glslFloat display "\<\d\+[eE][+-]\=\d\+\(lf\|LF\|f\|F\)\="
+syn match glslFloat display "\<\d\+\.\d\+\([eE][+-]\=\d\+\)\=\(lf\|LF\|f\|F\)\="
 
 " Swizzles
 syn match glslSwizzle display /\.[xyzw]\{1,4\}\>/
@@ -42,10 +42,9 @@ syn match glslSwizzle display /\.[rgba]\{1,4\}\>/
 syn match glslSwizzle display /\.[stpq]\{1,4\}\>/
 
 " Structure
-syn keyword   glslStructure   struct
+syn keyword glslStructure struct nextgroup=glslIdentifier skipwhite skipempty
 
-" This prevents numbers at ends of identifies from being highlighted as numbers
-syn match glslIdentifier display "\I\i*"
+syn match glslIdentifier contains=glslIdentifierPrime "\%([a-zA-Z_]\)\%([a-zA-Z0-9_]\)*" display contained
 
 " Types
 syn keyword glslType atomic_uint
@@ -659,13 +658,15 @@ hi def link glslOctalInt        glslInteger
 hi def link glslHexInt          glslInteger
 hi def link glslInteger         Number
 hi def link glslFloat           Float
+hi def link glslIdentifierPrime glslIdentifier
+hi def link glslIdentifier      Identifier
 hi def link glslStructure       Structure
 hi def link glslType            Type
 hi def link glslQualifier       StorageClass
 hi def link glslBuiltinConstant Constant
 hi def link glslBuiltinFunction Function
 hi def link glslBuiltinVariable Identifier
-hi def link glslSwizzle         SpecialChar
+hi def link glslSwizzle         Identifier
 
 if !exists("b:current_syntax")
   let b:current_syntax = "glsl"
