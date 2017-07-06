@@ -11,7 +11,7 @@ syn keyword glslRepeat      for while do
 syn keyword glslStatement   discard return break continue
 
 " Comments
-syn keyword glslTodo     contained TODO FIXME XXX
+syn keyword glslTodo     contained TODO FIXME XXX NOTE
 syn region  glslCommentL start="//" skip="\\$" end="$" keepend contains=glslTodo,@Spell
 syn region  glslComment  matchgroup=glslCommentStart start="/\*" end="\*/" extend contains=glslTodo,@Spell
 
