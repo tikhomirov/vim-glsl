@@ -7,8 +7,7 @@ if exists("b:current_syntax") && b:current_syntax == "chdr"
 endif
 
 " Modules
-syn keyword chdrFrom from
-syn keyword chdrImport import
+syn keyword chdrUse use
 
 " Statements
 syn keyword chdrConditional if else switch case default
@@ -651,8 +650,7 @@ syn keyword chdrBuiltinFunction map_frag_data
 syn keyword chdrBuiltinFunction yield_vertex
 syn keyword chdrBuiltinFunction yield_primitive
 
-hi def link chdrFrom            Statement
-hi def link chdrImport          Special
+hi def link chdrUse             Special
 hi def link chdrConditional     Conditional
 hi def link chdrRepeat          Repeat
 hi def link chdrStatement       Statement
