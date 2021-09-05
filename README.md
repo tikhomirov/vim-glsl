@@ -28,6 +28,16 @@ or using [modeline](http://vimdoc.sourceforge.net/htmldoc/options.html#modeline)
 
 ## Installation
 
+#### Using [VimPlug](https://https://github.com/junegunn/vim-plug)
+
+Add to your `vimrc`:
+
+```viml
+Plug 'tikhomirov/vim-glsl'
+```
+
+Then reload your `vimrc` and run `:PlugInstall`.
+
 #### Using [Vundle](https://github.com/gmarik/vundle)
 
 Add to your `vimrc`:
