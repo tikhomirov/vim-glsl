@@ -1,5 +1,5 @@
 " Language: OpenGL Shading Language
-" Maintainer: Sergey Tikhomirov <sergey@tikhomirov.io>
+" Maintainer: Sergii Tykhomyrov <sergii@tykhomyrov.net>
 
 " Extensions supported by Khronos reference compiler (with one exception, ".glsl")
 " https://github.com/KhronosGroup/glslang

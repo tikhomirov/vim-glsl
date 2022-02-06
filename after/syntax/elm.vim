@@ -1,5 +1,5 @@
 " Language: OpenGL Shading Language
-" Maintainer: Sergey Tikhomirov <sergey@tikhomirov.io>
+" Maintainer: Sergii Tykhomyrov <sergii@tykhomyrov.net>
 
 syn include @GLSL syntax/glsl.vim
 syn region GLSL

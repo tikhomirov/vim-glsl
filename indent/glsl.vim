@@ -1,5 +1,5 @@
 " Language: OpenGL Shading Language
-" Maintainer: Sergey Tikhomirov <sergey@tikhomirov.io>
+" Maintainer: Sergii Tykhomyrov <sergii@tykhomyrov.net>
 
 if exists("b:did_indent")
   finish
