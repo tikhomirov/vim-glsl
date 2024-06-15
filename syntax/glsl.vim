@@ -22,6 +22,10 @@ syn keyword glslTokenConcat     ##
 syn keyword glslPredefinedMacro __LINE__ __FILE__ __VERSION__ GL_ES
 syn region  glslPreProc         start="^\s*#\s*\(error\|pragma\|extension\|version\|line\)" skip="\\$" end="$" keepend
 
+" Folding Blocks
+syn region glslCurlyBlock start="{" end="}" transparent fold
+syn region glslParenBlock start="(" end=")" transparent fold
+
 " Boolean Constants
 syn keyword glslBoolean true false
 
